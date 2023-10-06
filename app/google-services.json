@@ -1,0 +1,119 @@
+{
+  "project_info": {
+    "project_number": "1093805832555",
+    "firebase_url": "https://doctorlinkapp-222b7-default-rtdb.firebaseio.com",
+    "project_id": "doctorlinkapp-222b7",
+    "storage_bucket": "doctorlinkapp-222b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093805832555:android:3b7542881ed5fa4f50f42e",
+        "android_client_info": {
+          "package_name": "com.codewithkael.javawebrtcyoutube"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093805832555-odvvcrn4gu3n0tr6uujh2q3elsv0oisl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo5Ep9kfWBMEmjBWj5ed3cY1r9uwaNXTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093805832555-odvvcrn4gu3n0tr6uujh2q3elsv0oisl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1093805832555-73kjatb6klvc3il3n8fmc0q85mh1lipn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kr.co.doctorlink"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093805832555:android:da98a93ebe2f22cf50f42e",
+        "android_client_info": {
+          "package_name": "doctorlink.co.kr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093805832555-odvvcrn4gu3n0tr6uujh2q3elsv0oisl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo5Ep9kfWBMEmjBWj5ed3cY1r9uwaNXTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093805832555-odvvcrn4gu3n0tr6uujh2q3elsv0oisl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1093805832555-73kjatb6klvc3il3n8fmc0q85mh1lipn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kr.co.doctorlink"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093805832555:android:eaf24c7c397ef5a450f42e",
+        "android_client_info": {
+          "package_name": "kr.co.doctorlink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093805832555-odvvcrn4gu3n0tr6uujh2q3elsv0oisl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo5Ep9kfWBMEmjBWj5ed3cY1r9uwaNXTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093805832555-odvvcrn4gu3n0tr6uujh2q3elsv0oisl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1093805832555-73kjatb6klvc3il3n8fmc0q85mh1lipn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kr.co.doctorlink"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
