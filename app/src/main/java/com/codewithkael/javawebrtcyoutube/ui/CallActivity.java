@@ -33,7 +33,7 @@ public class CallActivity extends AppCompatActivity implements MainRepository.Li
         mainRepository = MainRepository.getInstance();
         views.callBtn.setOnClickListener(v->{
             //start a call request here
-            mainRepository.sendCallRequest(views.targetUserNameEt.getText().toString(),()->{
+            mainRepository.sendCallRequest(views.targetUserNameEt.getText().toString(),()->{ //전화걸때
                 Toast.makeText(this, "couldnt find the target", Toast.LENGTH_SHORT).show();
             });
 
@@ -42,12 +42,12 @@ public class CallActivity extends AppCompatActivity implements MainRepository.Li
         mainRepository.initRemoteView(views.remoteView);
         mainRepository.listener = this;
 
-        mainRepository.subscribeForLatestEvent(data->{
-            if (data.getType()== DataModelType.StartCall){
+        mainRepository.subscribeForLatestEvent(data->{ //mainrepository에서 type을 받음
+            if (data.getType()== DataModelType.StartCall){ //걸어온 전화의 type이 뭔지 체크해서 아래 실행
                 runOnUiThread(()->{
                     views.incomingNameTV.setText(data.getSender()+" is Calling you");
                     views.incomingCallLayout.setVisibility(View.VISIBLE);
-                    views.acceptButton.setOnClickListener(v->{ //걸려온 전화를 받았을때
+                    views.acceptButton.setOnClickListener(v->{
                         //star the call here
                         mainRepository.startCall(data.getSender());
                         views.incomingCallLayout.setVisibility(View.GONE);

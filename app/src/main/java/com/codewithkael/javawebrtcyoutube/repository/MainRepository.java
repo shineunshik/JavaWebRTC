@@ -98,8 +98,8 @@ public class MainRepository implements WebRTCClient.Listener {
         this.remoteView = view;
     }
 
-    public void startCall(String target){
-        webRTCClient.call(target);
+    public void startCall(String target){ //callactivity 에서 받음
+        webRTCClient.call(target);  //webRTCClient호출
     }
 
     public void switchCamera() {
@@ -112,7 +112,7 @@ public class MainRepository implements WebRTCClient.Listener {
     public void toggleVideo(Boolean shouldBeMuted){
         webRTCClient.toggleVideo(shouldBeMuted);
     }
-    public void sendCallRequest(String target, ErrorCallBack errorCallBack){
+    public void sendCallRequest(String target, ErrorCallBack errorCallBack){ //전화걸때
         firebaseClient.sendMessageToOtherUser(
                 new DataModel(target,currentUsername,null, DataModelType.StartCall),errorCallBack
         );
@@ -122,18 +122,18 @@ public class MainRepository implements WebRTCClient.Listener {
         webRTCClient.closeConnection();
     }
 
-    public void subscribeForLatestEvent(NewEventCallBack callBack){
+    public void subscribeForLatestEvent(NewEventCallBack callBack){ //전화가 걸려올때
         firebaseClient.observeIncomingLatestEvent(model -> {
             switch (model.getType()){
 
-                case Offer:
+                case Offer://요청하다
                     this.target = model.getSender();
                     webRTCClient.onRemoteSessionReceived(new SessionDescription(
                             SessionDescription.Type.OFFER,model.getData()
                     ));
                     webRTCClient.answer(model.getSender());
                     break;
-                case Answer:
+                case Answer: //대답하다
                     this.target = model.getSender();
                     webRTCClient.onRemoteSessionReceived(new SessionDescription(
                             SessionDescription.Type.ANSWER,model.getData()
@@ -147,9 +147,9 @@ public class MainRepository implements WebRTCClient.Listener {
                             e.printStackTrace();
                         }
                     break;
-                case StartCall:
+                case StartCall: //걸려온 전화
                     this.target = model.getSender();
-                    callBack.onNewEventReceived(model);
+                    callBack.onNewEventReceived(model); //걸려온 전화번호의 정보를 받는다 mainrepository에서 받고 callactivity로 보낸다
                     break;
             }
 
