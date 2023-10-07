@@ -47,7 +47,7 @@ public class CallActivity extends AppCompatActivity implements MainRepository.Li
                 runOnUiThread(()->{
                     views.incomingNameTV.setText(data.getSender()+" is Calling you");
                     views.incomingCallLayout.setVisibility(View.VISIBLE);
-                    views.acceptButton.setOnClickListener(v->{
+                    views.acceptButton.setOnClickListener(v->{ //걸려온 전화를 받았을때
                         //star the call here
                         mainRepository.startCall(data.getSender());
                         views.incomingCallLayout.setVisibility(View.GONE);

@@ -29,13 +29,13 @@ public class FirebaseClient {
         });
     }
 
-    public void sendMessageToOtherUser(DataModel dataModel, ErrorCallBack errorCallBack){
-        dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
+    public void sendMessageToOtherUser(DataModel dataModel, ErrorCallBack errorCallBack){//전화를 걸 사람을 찾는다
+        dbRef.child("화상진료대기실").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.child(dataModel.getTarget()).exists()){
                     //send the signal to other user
-                    dbRef.child(dataModel.getTarget()).child(LATEST_EVENT_FIELD_NAME)
+                    dbRef.child(dataModel.getTarget()).child(LATEST_EVENT_FIELD_NAME) //전화가 시작돠면 서로 업데이트됨
                             .setValue(gson.toJson(dataModel));
 
                 }else {

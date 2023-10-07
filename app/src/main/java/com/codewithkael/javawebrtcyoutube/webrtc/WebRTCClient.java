@@ -133,7 +133,7 @@ public class WebRTCClient {
     }
 
     //negotiation section like call and answer
-    public void call(String target){
+    public void call(String target){ //걸려온 전화를 받았을때
         try{
             peerConnection.createOffer(new MySdpObserver(){
                 @Override
